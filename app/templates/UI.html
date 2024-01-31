@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="UI.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link rel="stylesheet" href="UI.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>yolo</title>
-  </head>
-  <body>
-    <div class="top-nav-bar">
-      <div class="top-nav-bar-button">
+</head>
+<body>
+<div class="top-nav-bar">
+    <div class="top-nav-bar-button">
         <label for="imageInput" style="cursor: pointer">Choose a file</label>
-        <input id="imageInput" class="file-input" type="file" id="fileInput" name="fileInput" required />
-      </div>
-      <button class="top-nav-bar-button" type="button" onclick="uploadImage()">Upload Image</button>
-      <input id="serverIp" type="text" name="text" class="input" placeholder="server ip address" />
+        <input id="imageInput" class="file-input" type="file" id="fileInput" name="fileInput" required/>
     </div>
-    <div id="resultContainer" style="display: none">
-      <h2>Result</h2>
-      <img id="originalImage" alt="Original Image" />
-      <img id="processedImage" alt="Processed Image" />
-    </div>
+    <button class="top-nav-bar-button" type="button" onclick="uploadImage()">Upload Image</button>
+    <input id="serverIp" type="text" name="text" class="input" placeholder="server ip address"/>
+</div>
+<div id="resultContainer" style="display: none">
+    <h2>Result</h2>
+    <img id="originalImage" alt="Original Image"/>
+    <img id="processedImage" alt="Processed Image"/>
+</div>
 
-    <script>
+<script>
       function uploadImage() {
         const serverIp = document.getElementById("serverIp").value ? document.getElementById("serverIp").value : "localhost";
         const fileInput = document.getElementById("imageInput");
@@ -49,6 +49,7 @@
           })
           .catch((error) => console.error("Error:", error));
       }
-    </script>
-  </body>
+
+</script>
+</body>
 </html>
